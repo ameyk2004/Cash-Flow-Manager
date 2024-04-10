@@ -33,7 +33,7 @@ def cash_flow_minimizer(transactions):
         debtor, debtor_balance = balances_array[0]
         creditor, creditor_balance = balances_array[-1]
 
-        min_transaction = min(-debtor_balance, creditor_balance)
+        min_transaction = round(min(-debtor_balance, creditor_balance), 2)
 
         transactions_list.append(f"{debtor} pays {min_transaction} to {creditor}")
 
